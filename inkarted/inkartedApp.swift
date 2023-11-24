@@ -11,7 +11,7 @@ import SwiftUI
 struct inkartedApp: App {
     var body: some Scene {
         WindowGroup {
-           ThirdTabView()
+           LandingView()
         }
     }
 }

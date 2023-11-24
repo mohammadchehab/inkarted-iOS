@@ -3,6 +3,8 @@ import SwiftUI
 struct LoginView : View {
     
     
+    @EnvironmentObject var navigationStateManager : NavigationStateManager
+    
     @State private var isPickerPresented: Bool = false
     @State private var selectedCountry: Country
     @State private var mobileNumber : String = ""
@@ -61,7 +63,7 @@ struct LoginView : View {
 
             Spacer()
             
-            Button(action: { })
+            Button(action: { navigationStateManager.go(to: ScreenType.OTPView)})
             {
                 Text("Let's Go")
                     .foregroundColor(.black)
